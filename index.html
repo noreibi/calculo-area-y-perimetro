@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>figura</title>
+</head>
+
+
+<!-- <script src="/funciones.js"></script> -->
+
+<body>
+    <header>
+        <div class="title-figure">
+
+            <h1> <img src="/img/958855.png" alt=""> Figuras geométricas</h1>
+        </div>
+
+        <p>
+            Este es el primer taller del curso práctico de Javascript
+        </p>
+    </header>
+
+    <section>
+        <h2>
+            Cálculos del cuadarado
+        </h2>
+        <form class="primer-formulario">
+            <label for="InputCuadrado">
+                <h3>Perímetro</h3>
+                <span>Lado del cuadrado: </span>
+            </label>
+            <input id="InputCuadrado" type="number" />
+            <br />
+            <button class="btn-1" type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular el perímetro
+            </button>
+            <label for="InputCuadradoArea">
+                <h3>Área</h3>
+                <span>Lado del cuadrado:</span>
+            </label>
+            <input id="InputCuadradoArea" type="number" />
+            <button class="btn-1" type="button" onclick="calcularAreaCuadrado()">
+                Calcular el área
+            </button>
+        </form>
+        <br />
+        <hr />
+        <h2>Cálculos del triángulo</h2>
+        <br />
+        <form class="segundo-formulario">
+            <h3>Perímetro</h3>
+            <label for="lado1Triangulo">
+                <span>Lado 1: </span>
+            </label>
+            <input id="lado1Triangulo" type="number" /><br />
+            <label for="lado2Triangulo">
+                <span>Lado 2:</span>
+            </label>
+            <input id="lado2Triangulo" type="number" /><br />
+            <label for="baseTriangulo">
+                <span>Base :</span>
+            </label>
+            <input id="baseTriangulo" type="number" /><br />
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular el perímetro
+            </button>
+
+
+            <h3>Área</h3>
+            <label for="alturaTriangulo">
+                <span>Altura:</span>
+            </label>
+            <input id="alturaTriangulo" type="number" /><br />
+            <label for="baseTriangulo2">
+                <span>Base:</span>
+            </label>
+            <input id="baseTriangulo2" type="number" /><br />
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular el área
+            </button>
+        </form>
+        <br />
+        <hr />
+        <br />
+
+    </section>
+
+    <script src="/figuras.js"></script>
+</body>
+
+</html>
