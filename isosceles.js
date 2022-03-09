@@ -1,5 +1,5 @@
-function perimetroTriangulo(ladoA, ladoB, base) {
-  return ladoA + ladoB + base;
+function perimetroTriangulo(ladoA, base) {
+  return 2 * ladoA + base;
 }
 
 function areaTriangulo(base, altura) {
@@ -7,51 +7,36 @@ function areaTriangulo(base, altura) {
 }
 
 function alturaTriangulo(ladoA, ladoBase) {
-  return Math.sqrt(ladoA) + ladoBase;
+  //return Math.sqrt(ladoA) + ladoBase;
+  return Math.sqrt(ladoA ** 2 - ladoBase ** 2 / 4);
 }
 
 function calcularPerimetroIsosceles() {
-  const inputladoA = document.getElementById("ladoATriangulo");
-  const inputladoB = document.getElementById("ladoBTriangulo");
-  const inputBase = document.getElementById("baseTriangulo");
+  const inputladoA = document.getElementById("ladoATrianguloPerimetro");
+  const inputBase = document.getElementById("baseTrianguloPerimetro");
 
   const ladoA = parseInt(inputladoA.value);
-  const ladoB = parseInt(inputladoB.value);
   const ladoBase = parseInt(inputBase.value);
 
-  const perimetro = perimetroTriangulo(ladoA, ladoB, ladoBase);
+  const perimetro = perimetroTriangulo(ladoA, ladoBase);
   alert(perimetro);
 }
 
 function calcularAreaIsosceles() {
-  const inputAltura = document.getElementById("alturaTriangulo");
-  const inputBase = document.getElementById("baseTriangulo2");
+  const inputAltura = document.getElementById("alturaTrianguloArea");
+  const inputBase = document.getElementById("baseTrianguloArea");
 
-  const base = inputBase.value;
   const altura = inputAltura.value;
+  const base = inputBase.value;
 
   const area = areaTriangulo(base, altura);
   alert(area);
 }
 
 function calcularAlturaIsosceles() {
-  const input = document.getElementById("InputIsoscelesAltura");
-  const inputladoA = document.getElementById("ladoATriangulo");
-  const inputladoB = document.getElementById("ladoBTriangulo");
-  const inputladoBase = document.getElementById("baseTriangulo");
+  const inputladoA = document.getElementById("ladoATrianguloAltura");
+  const inputladoBase = document.getElementById("baseTrianguloAltura");
 
-  const altura = alturaTriangulo(ladoA.value, ladoB.value, ladoBase.value);
+  const altura = alturaTriangulo(inputladoA.value, inputladoBase.value);
   alert(altura);
 }
-
-// codigo de un estudiante
-function altura(lado1, lado2, base) {
-  if (lado1 === lado2 && lado1 != base) {
-    alert("isoceles");
-    const altura = Math.sqrt(lado1 ** 2 - base ** 2 / 4);
-    console.log(altura);
-  } else {
-    alert("no lo se");
-  }
-}
-altura(6, 6, 4);
